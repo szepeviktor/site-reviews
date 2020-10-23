@@ -12,7 +12,7 @@ parameters:
   ignoreErrors:
     # Uses func_get_args()
     - '#^Function apply_filters(_ref_array)? invoked with [34567] parameters, 2 required\.$#'
-    # TODO
+    # It is acceptable.
     - '#^Unsafe usage of new static\(\)\.$#'
     # TODO Add Akismet stubs
     - '#^Call to static method (get_api_key|http_post)\(\) on an unknown class Akismet\.$#'
@@ -20,7 +20,7 @@ parameters:
     - '#^Call to protected method get_views\(\) of class WP_Posts_List_Table\.$#'
     # TODO Add Polylang stubs
     - '#^Function (pll_get_post|pll_get_post_language|pll_get_post_translations) not found\.$#'
-    # Define properties!!
+    # ArrayObject::ARRAY_AS_PROPS Entries can be accessed as properties (read and write).
     - '#^Access to an undefined property GeminiLabs\\SiteReviews\\(Arguments|Request)::\S+\.$#'
     # PHPStan has trouble recognizing global functions as callbacks
     - "#^Parameter \\#2 \\$callback of function array_filter expects callable\\(mixed, mixed\\): bool, '(strlen|trim)' given\\.$#"
